@@ -25,7 +25,7 @@ export default function BookingConfirmationScreen({ route }) {
     useEffect(() => {
         async function fetchReservation() {
             try {
-                const res = await axios.get(`http://192.168.1.103:8000/api-client/showtimes/${showtimeId}`);
+                const res = await axios.get(`http://localhost:8000/api-client/showtimes/${showtimeId}`);
                 setReservation(res.data);
             } catch (err) {
                 console.error('Error loading confirmation', err);

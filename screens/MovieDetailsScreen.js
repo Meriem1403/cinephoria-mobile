@@ -31,10 +31,10 @@ export default function MovieDetailsScreen({ route, navigation }) {
         async function fetchAll() {
             try {
                 const [showtimeRes, roomRes, cinemaRes, reservationRes] = await Promise.all([
-                    axios.get('http://192.168.1.103:8000/api-client/showtimes'),
-                    axios.get('http://192.168.1.103:8000/api-client/rooms'),
-                    axios.get('http://192.168.1.103:8000/api-client/cinemas'),
-                    axios.get('http://192.168.1.103:8000/api-client/reservations')
+                    axios.get('http://localhost:8000/api-client/showtimes'),
+                    axios.get('http://localhost:8000/api-client/rooms'),
+                    axios.get('http://localhost:8000/api-client/cinemas'),
+                    axios.get('http://localhost:8000/api-client/reservations')
                 ]);
                 setShowtimes(showtimeRes.data.member || []);
                 setRooms(roomRes.data.member || []);

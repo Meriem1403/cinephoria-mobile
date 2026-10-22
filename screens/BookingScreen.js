@@ -26,13 +26,13 @@ export default function BookingScreen({ route, navigation }) {
     useEffect(() => {
         async function fetchSeats() {
             try {
-                const resRooms = await axios.get('http://192.168.1.103:8000/api-client/rooms');
+                const resRooms = await axios.get('http://localhost:8000/api-client/rooms');
                 const allRooms = resRooms.data.member || [];
                 const room = allRooms.find(r => r.name === roomName);
                 if (!room) throw new Error(`Room "${roomName}" not found`);
 
                 const resSeats = await axios.get(
-                    `http://192.168.1.103:8000/api-client/seats?room.id=${room.id}&pagination=false`
+                    `http://localhost:8000/api-client/seats?room.id=${room.id}&pagination=false`
                 );
                 const seatList = resSeats.data.member || [];
 

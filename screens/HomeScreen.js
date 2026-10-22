@@ -15,7 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import axios from 'axios';
 
-const API_URL = 'http://192.168.1.103:8000/api-client/movies';
+const API_URL = 'http://localhost:8000/api-client/movies';
 const POSTER_BASE = 'http://192.168.1.103:8000/pictures/films/';
 const HERO_BASE = 'http://192.168.1.103:8000/pictures/hero/';
 const LOGO_URL = 'http://192.168.1.103:8000/pictures/logo.png';

@@ -24,7 +24,7 @@ export default function SelectFormulaScreen({ route, navigation }) {
     useEffect(() => {
         async function fetchShowtime() {
             try {
-                const res = await axios.get(`http://192.168.1.103:8000/api-client/showtimes/${showtimeId}`);
+                const res = await axios.get(`http://localhost:8000/api-client/showtimes/${showtimeId}`);
                 const showtime = res.data;
                 setPriceStandard(showtime.price / 100);
                 setUseSpecial(showtime.specialPrice);
